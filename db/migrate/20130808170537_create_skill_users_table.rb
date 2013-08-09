@@ -6,5 +6,6 @@ class CreateSkillUsersTable < ActiveRecord::Migration
       t.integer :proficiency
 
       t.timestamps
+    end
   end
 end

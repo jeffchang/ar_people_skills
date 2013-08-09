@@ -5,7 +5,7 @@ class Skill < ActiveRecord::Base
   validates_uniqueness_of :name
 
   def user_with_proficiency(rating)
-    SkillUser.where("skill = ? and proficiency = ?", self.name, rating).first
+    SkillUser.where("skill_id = ? and proficiency = ?", self.id, rating).first.user
   end
 
 end

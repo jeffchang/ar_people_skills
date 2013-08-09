@@ -1,6 +1,5 @@
 class AddUniqueIndex < ActiveRecord::Migration
   def change
-    add_index :skill_users [:user, :skill], :unique => true
-    add_column :skill_users, :proficiency, :default => 0
+    add_index(:skill_users, [:user_id, :skill_id], {unique: true})
   end
 end
